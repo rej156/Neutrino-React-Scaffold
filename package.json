@@ -2,7 +2,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "Get started with React!",
-  "repository": "mozilla-neutrino/react-starter",
   "keywords": [
     "neutrino",
     "react",
@@ -11,6 +10,7 @@
   ],
   "config": {
     "presets": [
+      "neutrino-preset-airbnb-base",
       "neutrino-preset-react"
     ],
     "neutrino": {
@@ -30,6 +30,7 @@
   "license": "MIT",
   "devDependencies": {
     "neutrino": "^4.0.0",
+    "neutrino-preset-airbnb-base": "^4.0.0",
     "neutrino-preset-react": "^4.0.0"
   },
   "dependencies": {
