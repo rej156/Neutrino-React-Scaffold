@@ -29,8 +29,8 @@
   "author": "Hassan Ali <helfi92@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "neutrino": "^4.0.0",
-    "neutrino-preset-airbnb-base": "^4.0.0",
+    "neutrino": "^4.0.1",
+    "neutrino-preset-airbnb-base": "^4.0.1",
     "neutrino-preset-react": "^4.0.1"
   },
   "dependencies": {
