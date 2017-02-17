@@ -1,0 +1,42 @@
+{
+  "name": "react-starter",
+  "version": "1.0.0",
+  "description": "Get started with React!",
+  "main": "index.js",
+  "repository": "mozilla-neutrino/react-starter",
+  "keywords": [
+    "neutrino",
+    "react",
+    "starter",
+    "webpack"
+  ],
+  "config": {
+    "presets": [
+      "neutrino-preset-react"
+    ],
+    "neutrino": {
+      "entry": {
+        "vendor": [
+          "react",
+          "react-dom"
+        ]
+      }
+    }
+  },
+  "scripts": {
+    "start": "neutrino start",
+    "build": "neutrino build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Hassan Ali <helfi92@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "neutrino": "^4.0.0",
+    "neutrino-preset-react": "^4.0.0"
+  },
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-hot-loader": "next"
+  }
+}
