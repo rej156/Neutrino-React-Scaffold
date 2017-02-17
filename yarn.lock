@@ -3140,9 +3140,9 @@ neutrino-preset-airbnb-base@^4.0.0:
     eslint-plugin-babel "^4.0.1"
     eslint-plugin-import "^2.2.0"
 
-neutrino-preset-react@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/neutrino-preset-react/-/neutrino-preset-react-4.0.0.tgz#7ec8e3092373d016c2250aaf961b524b8d55abb9"
+neutrino-preset-react@^4.0.1:
+  version "4.0.1"
+  resolved "https://registry.yarnpkg.com/neutrino-preset-react/-/neutrino-preset-react-4.0.1.tgz#a2f49c555d62f6cf021b597568413f0e516f2de5"
   dependencies:
     babel-plugin-transform-object-rest-spread "^6.22.0"
     babel-preset-react "^6.22.0"
