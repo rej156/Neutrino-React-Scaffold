@@ -1,8 +1,7 @@
 {
-  "name": "react-starter",
   "version": "1.0.0",
+  "private": true,
   "description": "Get started with React!",
-  "main": "index.js",
   "repository": "mozilla-neutrino/react-starter",
   "keywords": [
     "neutrino",
@@ -25,8 +24,7 @@
   },
   "scripts": {
     "start": "neutrino start",
-    "build": "neutrino build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "neutrino build"
   },
   "author": "Hassan Ali <helfi92@gmail.com>",
   "license": "MIT",
