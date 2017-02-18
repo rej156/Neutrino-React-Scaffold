@@ -75,17 +75,21 @@ manifest.6a4a611c5987c206c212.bundle.js    1.44 kB       2  [emitted]  manifest
 ✨  Done in 8.72s.
 ```
 
+## Running Tests
+
+In order to keep this starter kit minimalist, `react-starter` has no test runner configured, however adding one is incredible easy with Neutrino. Refer to the [relevant section on building and running tests](https://neutrino.js.org/usage.html#building-and-running-tests). 
+
 ## Customizing
 
 To override the build configuration, start with the documentation on [customization](https://neutrino.js.org/customization/). `neutrino-preset-react` does not use any additional named rules, loaders, or plugins that aren't already in use by the Web preset. See the [Web documentation customization](https://neutrino.js.org/presets/neutrino-preset-web/#customizing) for preset-specific configuration to override.
 
 ### Simple customization
 
-By following the [customization guide](https://neutrino.js.org/customization/simple.html) and knowing the rule, loader, and plugin IDs above, you can override and augment the build directly from package.json.
+By following the [customization guide](https://neutrino.js.org/customization/simple.html) and knowing the rule, loader, and plugin IDs above, you can override and augment the build directly from `package.json`.
 
 #### Vendoring
 
-To achieve long term caching benefits, you can make use of code splitting. Neutrino exposes a `vendor` entry point in package.json where third party libraries can be split into a chunk separate from your application code. 
+To achieve long term caching benefits, you can make use of code splitting. Neutrino exposes a `vendor` entry point in `package.json` where third party libraries can be split into a chunk separate from your application code. 
 
 This starter kit splits React and React DOM into the `vendor` chunk for you. Before going to production, it is recommended to push the rest of your dependencies to `vendor`.
 
