@@ -3,12 +3,11 @@
 Create React apps with zero initial configuration. `react-starter` is built using [Neutrino](https://github.com/mozilla-neutrino/neutrino-dev) to harness the power of Webpack with the simplicity of [presets](https://neutrino.js.org/presets/). 
  
 ## Features
-
-- Zero upfront configuration necessary to start developing and building a React web app
-- Modern Babel compilation adding JSX and object rest spread syntax
-- Support for React Hot Loader
-- Write JSX in .js or .jsx files
-- Lint JavaScript projects with Airbnb's base ESLint config, following the [Airbnb styleguide](https://github.com/airbnb/javascript)
+- Zero upfront configuration necessary to start developing and building a React web appZero upfront configuration necessary to start developing and building a React web app
+- Extends from [neutrino-preset-react](https://neutrino.js.org/presets/neutrino-preset-react/)
+  - Modern Babel compilation adding JSX and object rest spread syntax
+  - Support for React Hot Loader
+  - Write JSX in .js or .jsx files 
 - Extends from [neutrino-preset-web](https://neutrino.js.org/presets/neutrino-preset-web/)
   - Modern Babel compilation supporting ES modules, last 2 major browser versions, and async functions
   - Webpack loaders for importing HTML, CSS, images, icons, and fonts
@@ -16,6 +15,11 @@ Create React apps with zero initial configuration. `react-starter` is built usin
   - Automatic creation of HTML pages, no templating necessary
   - Hot Module Replacement support
   - Production-optimized bundles with Babili minification and easy chunking
+  - Easily extensible to customize your project as needed
+- Extends from [neutrino-preset-airbnb-base](https://neutrino.js.org/presets/neutrino-preset-airbnb-base/)
+  - Zero upfront configuration necessary to start linting your project
+  - Modern Babel knowledge supporting ES modules, JSX, Web and Node.js apps
+  - Highly visible during development, fails compilation when building for production
   - Easily extensible to customize your project as needed
 
 ## Requirements
