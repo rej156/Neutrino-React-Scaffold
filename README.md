@@ -29,10 +29,9 @@ Create React apps with zero initial configuration. `react-starter` is built usin
 
 ## Installation
 
-To get you started you can simply clone the `react-starter` repository and install the dependencies using Yarn or the npm client.
+To get you started fork and clone the `react-starter` repository and install the dependencies using Yarn or the npm client.
 
 ```bash
-❯ git clone git@github.com:mozilla-neutrino/react-starter.git 
 ❯ cd react-starter/
 ❯ yarn
 ```
