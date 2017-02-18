@@ -3,6 +3,7 @@
 Create React apps with zero initial configuration. `react-starter` is built using [Neutrino](https://github.com/mozilla-neutrino/neutrino-dev) to harness the power of Webpack with the simplicity of [presets](https://neutrino.js.org/presets/). 
  
 ## Features
+
 - Zero upfront configuration necessary to start developing and building a React web app
 - Extends from [neutrino-preset-react](https://neutrino.js.org/presets/neutrino-preset-react/)
   - Modern Babel compilation adding JSX and object rest spread syntax
