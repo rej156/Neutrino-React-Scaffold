@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@monty/bootstrap .featuresList returns list of * (default) features 1`] = `
+Array [
+  "feature-a",
+  "feature-b",
+  "featureC",
+]
+`;
+
+exports[`@monty/bootstrap .featuresList returns list of default + NODE_ENV features 1`] = `
+Array [
+  "feature-a",
+  "feature-b",
+  "foo",
+]
+`;
+
+exports[`@monty/bootstrap .featuresList returns list of development features if NODE_ENV is falsy 1`] = `
+Array [
+  "dev-feature-1",
+  "dev-feature-2",
+]
+`;
+
+exports[`@monty/bootstrap .featuresList returns list of * (default) features 1`] = `
+Array [
+  "feature-a",
+  "feature-b",
+  "featureC",
+]
+`;
+
+exports[`@monty/bootstrap .featuresList returns list of default + NODE_ENV features 1`] = `
+Array [
+  "feature-a",
+  "feature-b",
+  "foo",
+]
+`;
+
+exports[`@monty/bootstrap .featuresList returns list of development features if NODE_ENV is falsy 1`] = `
+Array [
+  "dev-feature-1",
+  "dev-feature-2",
+]
+`;

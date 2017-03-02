@@ -1,0 +1,157 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`@monty/core .clear exposes a method for each core item 1`] = `
+Object {
+  "componentNeeds": [Function],
+  "initialState": [Function],
+  "persistedStateKeys": [Function],
+  "preRenderActions": [Function],
+  "reducers": [Function],
+  "rootComponent": [Function],
+  "router": [Function],
+  "routesHandlers": [Function],
+  "sagas": [Function],
+  "store": [Function],
+  "storeMiddleware": [Function],
+}
+`;
+
+exports[`@monty/core .get exposes a method for each core item 1`] = `
+Object {
+  "componentNeeds": [Function],
+  "initialState": [Function],
+  "persistedStateKeys": [Function],
+  "preRenderActions": [Function],
+  "reducers": [Function],
+  "rootComponent": [Function],
+  "router": [Function],
+  "routesHandlers": [Function],
+  "sagas": [Function],
+  "store": [Function],
+  "storeMiddleware": [Function],
+}
+`;
+
+exports[`@monty/core .register exposes a method for each core item 1`] = `
+Object {
+  "componentNeeds": [Function],
+  "initialState": [Function],
+  "persistedStateKeys": [Function],
+  "preRenderActions": [Function],
+  "reducers": [Function],
+  "rootComponent": [Function],
+  "router": [Function],
+  "routesHandlers": [Function],
+  "sagas": [Function],
+  "store": [Function],
+  "storeMiddleware": [Function],
+}
+`;
+
+exports[`@monty/core .register method for items initialised with array content concatenates the content value to the item array 1`] = `
+Object {
+  "after": Array [
+    Object {
+      "foo": [Function],
+    },
+    Object {
+      "bar": [Function],
+    },
+  ],
+  "before": Array [
+    Object {
+      "foo": [Function],
+    },
+  ],
+}
+`;
+
+exports[`@monty/core .register method for items initialised with array content replaces the item with an empty array if shouldReplace and content is nil 1`] = `
+Object {
+  "after": Array [],
+  "before": Array [
+    Object {
+      "baz": [Function],
+    },
+  ],
+}
+`;
+
+exports[`@monty/core .register method for items initialised with array content replaces the item with the content array if shouldReplace 1`] = `
+Object {
+  "after": Array [
+    Object {
+      "foo": [Function],
+    },
+  ],
+  "before": Array [
+    Object {
+      "baz": [Function],
+    },
+    Object {
+      "qux": [Function],
+    },
+  ],
+}
+`;
+
+exports[`@monty/core .register method for items initialised with nil (any content) always replaces the item with the content value 1`] = `
+Object {
+  "store1": Object {
+    "baz": [Function],
+  },
+  "store2": [Function],
+  "store3": Object {},
+}
+`;
+
+exports[`@monty/core .register method for items initialised with plain object content merges the content object with the item object 1`] = `
+Object {
+  "after": Object {
+    "bar": [Function],
+    "baz": [Function],
+    "foo": [Function],
+  },
+  "before": Object {
+    "bar": [Function],
+    "foo": [Function],
+  },
+}
+`;
+
+exports[`@monty/core .register method for items initialised with plain object content replaces the item with an empty object if shouldReplace and content is nil 1`] = `
+Object {
+  "after": Object {},
+  "before": Object {
+    "baz": [Function],
+  },
+}
+`;
+
+exports[`@monty/core .register method for items initialised with plain object content replaces the item with the content object if shouldReplace 1`] = `
+Object {
+  "after": Object {
+    "foo": [Function],
+  },
+  "before": Object {
+    "baz": [Function],
+    "qux": [Function],
+  },
+}
+`;
+
+exports[`@monty/core has registered items 1`] = `
+Array [
+  "store",
+  "router",
+  "rootComponent",
+  "preRenderActions",
+  "componentNeeds",
+  "routesHandlers",
+  "storeMiddleware",
+  "persistedStateKeys",
+  "initialState",
+  "reducers",
+  "sagas",
+]
+`;
