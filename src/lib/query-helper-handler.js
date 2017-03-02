@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { heShallowEncode } from './html-entities';
 
 function decode(str) {
@@ -14,14 +15,14 @@ export function splitQuery(search) {
   const queries = search.split('?')[1];
 
   return queries ? queries.split('&').reduce((prev, curr) => {
-    const [key, value] = curr.split('=');
-    const decoded = decode(value);
+        const [key, value] = curr.split('=');
+        const decoded = decode(value);
 
-    return {
-      ...prev,
-      [key]: heShallowEncode(decoded.replace(/\+/g, ' ')),
-    };
-  }, {}) : {};
+        return {
+          ...prev,
+          [key]: heShallowEncode(decoded.replace(/\+/g, ' ')),
+        };
+      }, {}) : {};
 }
 
 export function joinQuery(query) {

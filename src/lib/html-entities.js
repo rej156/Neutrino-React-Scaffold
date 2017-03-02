@@ -1,5 +1,6 @@
+/* eslint-disable */
 const transform = keys =>
-  string => string ? Object.keys(keys).reduce((cur, next) => cur.replace(keys[next], next), string) : string;
+  (string) => string ? Object.keys(keys).reduce((cur, next) => cur.replace(keys[next], next), string) : string
 
 export const heDecode = transform({
   '&': /&amp;/g,

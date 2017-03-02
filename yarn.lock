@@ -4211,7 +4211,7 @@ neutrino-preset-jest@^4.3.0:
     eslint-plugin-jest "^19.0.1"
     jest-cli "^18.1.0"
 
-neutrino-preset-react@latest:
+neutrino-preset-react@^4.2.3:
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/neutrino-preset-react/-/neutrino-preset-react-4.2.3.tgz#a3192bcbcfc0430db1566bc49deabbea9443155f"
   dependencies:

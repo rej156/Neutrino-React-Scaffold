@@ -1,7 +1,8 @@
 {
+  "name": "neutrino-react-scaffold",
   "version": "1.0.0",
   "private": true,
-  "description": "Get started with React!",
+  "description": "get started with react!",
   "engines": {
     "node": ">=6.9"
   },
@@ -13,6 +14,7 @@
   ],
   "config": {
     "presets": [
+      "neutrino-preset-airbnb-base",
       "neutrino-preset-react",
       "neutrino-custom.js"
     ],
@@ -21,7 +23,7 @@
         "vendor": [
           "react",
           "react-dom",
-          "react-dom", 
+          "react-dom",
           "react-hammerjs",
           "react-helmet",
           "react-hot-loader",
@@ -31,6 +33,28 @@
           "react-router-redux",
           "redux"
         ]
+      },
+      "module": {
+        "rule": {
+          "lint": {
+            "loader": {
+              "eslint": {
+                "options": {
+                  "baseconfig": {
+                    "extends": [
+                      "smsenesac/babel-es2017"
+                    ]
+                  },
+                  "rules": {
+                    "experimentaldecorators": 0,
+                    "no-confusing-arrow": "off",
+                    "semi": "off"
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   },
@@ -38,9 +62,9 @@
     "start": "neutrino start",
     "build": "neutrino build"
   },
-  "author": "Eric Juta <ericjohnjuta@gmail.com>",
-  "license": "MIT",
-  "devDependencies": {
+  "author": "eric juta <ericjohnjuta@gmail.com>",
+  "license": "mit",
+  "devdependencies": {
     "babel-preset-stage-0": "^6.22.0",
     "enzyme": "^2.7.1",
     "eslint": "^3.16.1",
@@ -54,7 +78,7 @@
     "neutrino": "latest",
     "neutrino-preset-airbnb-base": "latest",
     "neutrino-preset-jest": "^4.3.0",
-    "neutrino-preset-react": "latest",
+    "neutrino-preset-react": "^4.2.3",
     "react-addons-test-utils": "^15.4.2"
   },
   "dependencies": {

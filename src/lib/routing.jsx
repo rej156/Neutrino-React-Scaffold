@@ -13,13 +13,13 @@ export const renderRedirect = ({ path, to }) => {
   const redirect = () => <Redirect to={to} />;
 
   return [<Route path={path} key={path} render={redirect} />].concat(
-    path !== encoded ? <Route path={encoded} key={encoded} render={redirect} /> : [],
+    path === encoded ? [] : <Route path={encoded} key={encoded} render={redirect} />,
   );
 };
 
 export const renderRoute = ({ path, Component, props, routes, ...routeProps }) => {
   const encoded = encode(path);
-  const component = matchProps => (
+  const component = matchProps =>
     <Component {...props} {...matchProps}>
       {routes &&
         <Switch>
@@ -28,19 +28,19 @@ export const renderRoute = ({ path, Component, props, routes, ...routeProps }) =
           )}
         </Switch>}
     </Component>
-  );
+  ;
 
   return [<Route path={path} key={path} render={component} {...routeProps} />].concat(
-    path !== encoded
-      ? <Route path={encoded} key={encoded} render={component} {...routeProps} />
-      : [],
+    path === encoded ?
+      [] :
+      <Route path={encoded} key={encoded} render={component} {...routeProps} />,
   );
 };
 
-// routeHandlers registered by features (../features/*/routes.js)
+// RouteHandlers registered by features (../features/*/routes.js)
 export const getRoutes = (...args) =>
   flatten(core.get.routesHandlers().map(routesHandler => routesHandler(...args)));
 
-// router registered by Root (via ./withRootSetup.js)
+// Router registered by Root (via ./withRootSetup.js)
 export const registerRouter = once(core.register.router);
 export const getRouter = () => core.get.router();

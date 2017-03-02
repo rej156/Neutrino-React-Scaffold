@@ -1,3 +1,2 @@
-export default (WrappedComponent) => (
+export default WrappedComponent =>
   WrappedComponent.displayName || WrappedComponent.name || 'Component'
-)

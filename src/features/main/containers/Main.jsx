@@ -4,8 +4,7 @@ import { connect } from 'react-redux';
 @connect(state => ({ lol: state.myReducer }))
 class Main extends Component {
   render() {
-    const { children, lol } = this.props;
-    console.log(lol);
+    const { children } = this.props;
 
     return (
       <div>

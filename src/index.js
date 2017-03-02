@@ -1,12 +1,13 @@
+/* eslint-disable */
 import React from 'react';
 import { render } from 'react-dom';
 import { combineReducers } from 'redux';
+import { AppContainer } from 'react-hot-loader';
+import Router from 'react-router-dom/BrowserRouter';
 import getApp from './App';
 import core from './core';
-import { initStore } from './store';
-import { bootstrapFeatures, featuresList } from './bootstrap';
-import Router from 'react-router-dom/BrowserRouter';
-import { AppContainer } from 'react-hot-loader';
+import initStore from './store';
+import { bootstrapFeatures } from './bootstrap';
 
 /**
  * Bootstrap features for browser
@@ -26,7 +27,7 @@ bootstrapFeatures(feature => requireFeature(`./${feature}/index.js`));
  *  const getPersistedState = () => JSON.parse(localStorage.getItem('@monty/state'))
  *  const initialState = { ...window.__INITIAL_STATE__, ...getPersistedState() }
  */
-const initialState = window.__INITIAL_STATE__;
+const initialState = window.INITIAL_STATE;
 core.register.initialState(initialState);
 
 const store = initStore();

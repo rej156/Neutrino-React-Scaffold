@@ -1,21 +1,19 @@
-import React, { Component, PropTypes } from 'react';
+import React, { Component } from 'react';
 import { LOCATION_CHANGE } from 'react-router-redux';
 import omit from 'ramda/src/omit';
-
 import core from '../core';
 import { splitQuery } from './query-helper';
-
 import withRouter from './withRouterPatch';
 import getDisplayName from './getDisplayName';
 import { registerRouter } from './routing';
 
 export default ComponentWithRootSetup => {
   const locationChange = location => core.get.store().dispatch({
-    type: LOCATION_CHANGE,
     payload: {
       ...location,
       query: location.query || splitQuery(location.search),
     },
+    type: LOCATION_CHANGE,
   });
 
   class RootSetup extends Component {

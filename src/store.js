@@ -1,12 +1,11 @@
 import { compose, applyMiddleware, createStore, combineReducers } from 'redux';
 import ReduxAsyncQueue from 'redux-async-queue';
 import thunkMiddleware from 'redux-thunk';
-
 import core from './core';
 
-export const initStore = () => {
+export default function initStore() {
   const composeEnhancers = process.env.NODE_ENV !== 'production' && typeof window === 'object' ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ :
+    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : // eslint-disable-line
     compose;
 
   const store = createStore(
@@ -30,4 +29,4 @@ export const initStore = () => {
   core.register.store(store);
 
   return store;
-};
+}

@@ -1,9 +1,0 @@
-{
-  "extends": [ 
-    "airbnb",
-    "smsenesac/babel-es2017"
-   ],
-  "rules": {
-    "semi": 0
-  }
-}

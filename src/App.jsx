@@ -13,7 +13,7 @@ import { getRoutes, renderRoute, renderRedirect } from './lib/routing';
  * @param {object} store - initialised store
  * @param {Component} Router - Renderer's router component
  */
-export default ({ store, Router, ...routerProps }) => {
+export default function App({ store, Router, ...routerProps }) {
   // Root component registered by main feature (./features/main)
   const Root = withRootSetup(core.get.rootComponent());
 
@@ -28,4 +28,4 @@ export default ({ store, Router, ...routerProps }) => {
       </Router>
     </Provider>
   );
-};
+}

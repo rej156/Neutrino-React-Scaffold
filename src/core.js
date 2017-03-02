@@ -2,11 +2,11 @@ import clone from 'ramda/src/clone';
 import uniq from 'ramda/src/uniq';
 import isNil from 'ramda/src/isNil';
 
-// core API
+// Core API
 const core = {
-  register: {},
   clear: {},
   get: {},
+  register: {},
 };
 export default core;
 
@@ -16,17 +16,16 @@ export default core;
 // - for {}: only allows object items & register merges
 // - for null | undefined: allows any item & register replacea
 const coreItems = {
-  store: null,
-  router: null,
-  rootComponent: null,
-  preRenderActions: [],
   componentNeeds: {},
-  routesHandlers: [],
-  storeMiddleware: [],
-  persistedStateKeys: [],
   initialState: {},
+  persistedStateKeys: [],
+  preRenderActions: [],
   reducers: {},
-  sagas: [],
+  rootComponent: null,
+  router: null,
+  routesHandlers: [],
+  store: null,
+  storeMiddleware: [],
 };
 
 const isObject = val =>
@@ -44,6 +43,7 @@ class CoreItem {
 
     const done = updatedValue => {
       coreItems[key] = updatedValue;
+
       return core.register;
     };
 
@@ -70,12 +70,11 @@ class CoreItem {
 
   clear = () => {
     this.register(null, true);
+
     return core.clear;
   };
 
-  get = () => {
-    return clone(coreItems[this.key]);
-  };
+  get = () => clone(coreItems[this.key]);
 }
 
 /**

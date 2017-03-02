@@ -2,7 +2,6 @@ import compose from 'ramda/src/compose';
 import flatten from 'ramda/src/flatten';
 import values from 'ramda/src/values';
 import pick from 'ramda/src/pick';
-import once from 'ramda/src/once';
 import core from './core';
 import featuresConfig from './features.config.json';
 
@@ -32,7 +31,6 @@ const bootstrapFeature = feature => {
     persistedStateKeys = [],
     initialState = {},
     reducers = {},
-    sagas = [],
   } = feature;
 
   core.register
