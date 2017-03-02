@@ -13,9 +13,9 @@ const REGEXP_APP_FEATURES = new RegExp(`^./(${featuresList.join('|')})/index.js$
 module.exports = neutrino => {
   neutrino.config.plugin('define').use(webpack.DefinePlugin, { REGEXP_APP_FEATURES });
   neutrino.config.plugin('named-modules').use(webpack.NamedModulesPlugin);
-
   neutrino.config.module.rule('compile').loader('babel', ({ options }) => {
-    // Options.plugins.push([require.resolve('styled-jsx/babel')]);
+    options.plugins.push([require.resolve('styled-jsx/babel')]);
+    options.plugins.push([require.resolve('babel-plugin-transform-decorators-legacy')]);
     options.presets[0] = [require.resolve('babel-preset-stage-0')];
 
     return { options };

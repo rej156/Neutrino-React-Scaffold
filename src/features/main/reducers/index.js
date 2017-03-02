@@ -11,5 +11,6 @@ function createReducer(initialState, handlers) {
 }
 
 const myReducer = createReducer([], { LOL: state => state });
+const myReducer2 = createReducer([], { LOL: state => state });
 
 export default { myReducer };

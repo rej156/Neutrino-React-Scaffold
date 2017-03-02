@@ -48,6 +48,7 @@ const bootstrapFeature = feature => {
     .reducers(reducers)
     .sagas(sagas);
   // - end used in ./store.js
+  console.log('bootstrapping');
 
   // Only register first Root component
   // this condition ensures it's not replaced accidentally
@@ -57,6 +58,5 @@ const bootstrapFeature = feature => {
 };
 
 // Features are imported using getFeature that's passed in from server / browser renderer
-export const bootstrapFeatures = once(getFeature => {
+export const bootstrapFeatures = getFeature =>
   featuresList.forEach(featureName => bootstrapFeature(getFeature(featureName)));
-});

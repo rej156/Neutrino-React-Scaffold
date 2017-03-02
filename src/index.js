@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { combineReducers } from 'redux';
 import getApp from './App';
 import core from './core';
 import { initStore } from './store';
@@ -45,16 +46,19 @@ requireFeature.keys().forEach(key => {
 if (module.hot) {
   module.hot.accept(requireFeature.id, () => {
     const requireFeature = require.context('./features', true, REGEXP_APP_FEATURES);
+    core.clear.reducers();
     bootstrapFeatures(feature => requireFeature(`./${feature}/index.js`));
+    store.replaceReducer(combineReducers(require('./core').default.get.reducers()));
+    const getComponent = require('./App.jsx').default;
+    const component = getComponent({ store, Router });
+    load(component);
+
     const changedModules = requireFeature
       .keys()
       .map(key => [key, requireFeature(key)])
       .filter(reloadedModule => modules[reloadedModule[0]] !== reloadedModule[1]);
     changedModules.forEach(module => {
       modules[module[0]] = module[1];
-      const getComponent = require('./App.jsx').default;
-      const component = getComponent({ store, Router });
-      load(component);
     });
   });
 }
