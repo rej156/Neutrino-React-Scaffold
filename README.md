@@ -1,4 +1,5 @@
 # React Starter
+> Credits to @walea3
 
 Create React apps with zero initial configuration. `react-starter` is built using [Neutrino](https://github.com/mozilla-neutrino/neutrino-dev) to harness the power of Webpack with the simplicity of [presets](https://neutrino.js.org/presets/). 
  

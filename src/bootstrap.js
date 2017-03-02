@@ -3,7 +3,6 @@ import flatten from 'ramda/src/flatten';
 import values from 'ramda/src/values';
 import pick from 'ramda/src/pick';
 import once from 'ramda/src/once';
-
 import core from './core';
 import featuresConfig from './features.config.json';
 
@@ -39,14 +38,13 @@ const bootstrapFeature = feature => {
   core.register
     .routesHandlers(getRoutes) // Used in ./app.js (via ./lib/routing.js)
     .preRenderActions(preRenderActions) // Used in ./server/render.js
-    // @TODO implement usage (see ./browser/render/js)
-    // used in ./browser/render.js & ./store
+    // @TODO Feature export array of keys => StoreEnhancer => Rehydrate store initialState from Localstorage
     .persistedStateKeys(persistedStateKeys)
     // - start used in ./store.js
     .storeMiddleware(storeMiddleware)
     .initialState(initialState)
-    .reducers(reducers)
-    .sagas(sagas);
+    .reducers(reducers);
+  // .sagas(sagas);
   // - end used in ./store.js
 
   // Only register first Root component
