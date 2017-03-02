@@ -9,7 +9,7 @@ class Main extends Component {
 
     return (
       <div>
-        <p>Hello </p>
+        <p>Hello world!</p>
         {children}
       </div>
     );

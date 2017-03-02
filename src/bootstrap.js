@@ -48,7 +48,6 @@ const bootstrapFeature = feature => {
     .reducers(reducers)
     .sagas(sagas);
   // - end used in ./store.js
-  console.log('bootstrapping');
 
   // Only register first Root component
   // this condition ensures it's not replaced accidentally
