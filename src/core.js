@@ -41,7 +41,7 @@ class CoreItem {
     const key = this.key;
     const currentValue = this.get();
 
-    const done = updatedValue => {
+    const done = (updatedValue) => {
       coreItems[key] = updatedValue;
 
       return core.register;
@@ -88,7 +88,7 @@ export const itemKeys = Object.keys(coreItems);
  * - core.clear.store()
  * - core.get.store()
  */
-itemKeys.forEach(key => {
+itemKeys.forEach((key) => {
   const item = new CoreItem(key);
 
   core.register[key] = item.register;

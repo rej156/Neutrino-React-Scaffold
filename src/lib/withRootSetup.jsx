@@ -5,9 +5,9 @@ import core from '../core';
 import { splitQuery } from './query-helper';
 import withRouter from './withRouterPatch';
 import getDisplayName from './getDisplayName';
-import { registerRouter } from './routing';
+import { registerRouter } from './routing.jsx';
 
-export default ComponentWithRootSetup => {
+export default (ComponentWithRootSetup) => {
   const locationChange = location => core.get.store().dispatch({
     payload: {
       ...location,

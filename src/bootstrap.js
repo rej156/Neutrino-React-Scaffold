@@ -18,7 +18,7 @@ export const featuresList = compileFeaturesList(featuresConfig);
  * Bootstrap feature
  * - registers exported items as defined in core
  */
-const bootstrapFeature = feature => {
+const bootstrapFeature = (feature) => {
   if (!feature) {
     return;
   }
@@ -36,7 +36,8 @@ const bootstrapFeature = feature => {
   core.register
     .routesHandlers(getRoutes) // Used in ./app.js (via ./lib/routing.js)
     .preRenderActions(preRenderActions) // Used in ./server/render.js
-    // @TODO Feature export array of keys => StoreEnhancer => Rehydrate store initialState from Localstorage
+    // @TODO Feature export array of keys => StoreEnhancer =>
+    // Rehydrate store initialState from Localstorage
     .persistedStateKeys(persistedStateKeys)
     // - start used in ./store.js
     .storeMiddleware(storeMiddleware)

@@ -2,8 +2,8 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import Switch from 'react-router-dom/Switch';
 import core from './core';
-import withRootSetup from './lib/withRootSetup';
-import { getRoutes, renderRoute, renderRedirect } from './lib/routing';
+import withRootSetup from './lib/withRootSetup.jsx';
+import { getRoutes, renderRoute, renderRedirect } from './lib/routing.jsx';
 
 /**
  * Application init
